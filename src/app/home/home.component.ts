@@ -5,6 +5,11 @@ export interface Food {
   viewValue: string;
 }
 
+export interface Link{
+  label: string;
+  path: string;
+}
+
 
 @Component({
   selector: 'app-home',
@@ -17,6 +22,14 @@ export class HomeComponent implements OnInit {
     {value: 'pizza-1', viewValue: 'Pizza'},
     {value: 'tacos-2', viewValue: 'Tacos'}
   ];
+
+  //Links to tabs
+  links: Link[] = [
+    {label: 'First', path: '/home' },
+    {label: 'Second', path: 'home' },
+    {label: 'Third', path: 'home' },
+  ];
+  activeLink = this.links[0];
   
   constructor() { }
 

@@ -10,7 +10,8 @@ import { MatCardModule,
          MatInputModule,
          MatSidenavModule,
          MatListModule,
-         MatSelectModule } from '@angular/material';
+         MatSelectModule,
+         MatTabsModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -37,6 +38,7 @@ import { HomeComponent } from './home/home.component';
     MatSidenavModule,
     MatListModule,
     MatSelectModule,
+    MatTabsModule,
     FlexLayoutModule
   ],
   providers: [],

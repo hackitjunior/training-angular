@@ -2,8 +2,9 @@ import { Injectable } from '@angular/core';
 
 export interface OptionMenu {
   label: string;
-  link: string;
+  url?: string;
   icon?: string;
+  routerLink?: string;
 }
 
 @Injectable({
@@ -15,7 +16,8 @@ export class OptionMenuService {
 
   getOptions(): OptionMenu[] {
     return [
-      {label: 'Home', link: '/home'}
+      {label: 'Home', url: 'http://google.com'},
+      {label: 'Material', routerLink: '/home'}
     ];
   }
 }

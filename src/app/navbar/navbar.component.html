@@ -6,19 +6,10 @@
     </div>
     <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
         <ul fxLayout fxLayoutGap="15px" class="navigation-items">
-            <li>
-                <a target="_blank" href="https://material.angular.io/">Angular Material</a>
-            </li>
-            <li>
-                <a target="_blank" href="https://www.npmjs.com/package/@angular/flex-layout">Flex-Layout</a>
+            <li *ngFor="let option of options">
+                <a *ngIf="option.routerLink"  [routerLink]="option.routerLink">{{option.label}}</a>
+                <a *ngIf="option.url"  [href]="option.url">{{option.label}}</a>
             </li>
         </ul>
     </div>
-    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
-            <ul fxLayout fxLayoutGap="15px" class="navigation-items">
-                <li>
-                    <a target="_blank" href="https://material.angular.io/" *ngFor="let option of options">{{option.label}}</a>
-                </li>
-            </ul>
-        </div>
 </mat-toolbar>

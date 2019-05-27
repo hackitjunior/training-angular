@@ -7,8 +7,14 @@ import { OptionMenu } from '../navigation/option-menu.service';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+  private _options: Array<OptionMenu> = [];
   @Output() public sidenavToggle = new EventEmitter();
-  @Input() public options: Array<OptionMenu> = [];
+  
+  @Input()
+  get options(): Array<OptionMenu>{return this._options}
+  set options(values: Array<OptionMenu>){
+    this._options = values;
+  }
 
   constructor() { }
  

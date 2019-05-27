@@ -57,3 +57,29 @@
       </div>
   </div>
 </div>
+
+<div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="10px" fxLayoutAlign="center">
+  <div fxFlex="30%">
+    <h1>Center</h1>
+    <img mat-card-image class="img" src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/8V46UZCS0V.jpg">
+  </div>
+</div>
+
+<div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="10px" fxLayoutAlign="center">
+  <div fxFlex="30%">
+      <mat-tab-group>
+        <mat-tab label="First"> Content 1 </mat-tab>
+        <mat-tab label="Second"> Content 2 </mat-tab>
+        <mat-tab label="Third"> Content 3 </mat-tab>
+      </mat-tab-group>          
+  </div>
+</div>
+
+<nav mat-tab-nav-bar>
+  <a mat-tab-link *ngFor="let link of links"
+      [routerLink]="link.path"
+      (click)="activeLink = link.label"
+      [active]="activeLink == link.label"> {{link.label}} </a>
+  <a mat-tab-link disabled>Disabled Link</a>
+</nav>
+<router-outlet></router-outlet>
